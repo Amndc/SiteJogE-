@@ -1,0 +1,329 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;   
+}
+
+body{
+    background: linear-gradient(90deg,  #6175f4, #6b61f4 );
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 11vh;
+    background: linear-gradient(-90deg,  #6873b9, #2843f1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo img{
+    margin-left: 55%;
+    border-radius: 22px;
+    height: 52px;
+    width: 169px;   
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color:rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 17px;  
+   
+}
+.nav-links a:hover{
+    color: #8596f6;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;    
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.container{
+    position: absolute;
+    margin-left: 21%;
+    margin-top: 2%;
+    width: 60%;  
+    height: 580px;      
+    border-radius: 3%;
+}
+
+.form {  
+    letter-spacing: 2px;
+    position: relative;
+    background-color: white;
+    margin-top: 1%;
+    margin-left: 4%;
+    width: 92%;
+    height: 500px;  
+    padding: 60px; 
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 3%;
+    box-shadow: 3px 3px 20px 8px   rgba(24, 10, 39, 0.652);
+}
+
+.form h1{
+    margin-top: -7%;
+    margin-left: 10%;
+    color: #190651;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    justify-content: center;   
+}
+
+.form h5 {
+    position: relative;
+    margin-top: 3%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.form  p{  
+    position: absolute;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 5.5%;
+    margin-left: 32%;
+    font-weight: 100;
+    color: #000000;
+    font-family:  sans-serif;
+    font-weight: 300;
+}
+.form a{
+    text-decoration: none;
+    color: #070786;
+    font-family:  sans-serif;
+    font-weight: 500;
+}
+
+.form a:hover{
+    color: #7001a0;
+}
+
+.form .dados {
+
+    position: relative;
+    width: 100%;
+    padding: 7px;
+    height: 30px;
+    border-radius: 8px;
+    border: 0.5px solid rgb(12, 12, 70) ;
+}
+
+.form .email{
+    margin-bottom: -3%;
+    
+    margin-top: 4%;
+    position: relative;
+}
+
+.form .email .txtemail{
+    width: 70%;
+    padding: 7px;
+    height: 30px;
+    border-radius: 8px;
+    border: 0.5px solid rgb(12, 12, 70) ;
+   
+}
+
+.form .idade {
+    margin-top: -8.6%;
+    margin-bottom: -3%;
+    margin-left: 73%;
+    position: relative;
+}
+
+.form .idade .txtidade{
+    width: 100%;
+    height: 30px;
+    padding: 7px;
+    border-radius: 8px;
+    border: 0.5px solid rgb(12, 12, 70) ;
+}
+
+
+.form .ra{
+    margin-bottom: -2%;    
+    margin-top: 0%;
+    position: relative;
+}
+
+.form .ra .txtra{
+    width: 100%;
+    padding: 7px;
+    height: 30px;
+    border-radius: 8px;
+    border: 0.5px solid rgb(12, 12, 70) ;
+   
+}
+
+.form .btn { 
+    position: absolute;  
+    margin-left: 10%;
+    margin-top: 4%;
+    height: 40px;
+    width: 150px;
+    background-color:  #495bcf;
+    color: #fff;
+    letter-spacing: 2px;  
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+    border-radius: 18px;
+    border: 0.5px solid rgba(5, 30, 155, 0.852);
+    
+}
+
+.form .btn:hover{
+    background-color:  #2b3ba2;
+    cursor: pointer;
+}
+
+.spa{
+    position: absolute;
+    right: 75px;
+    transform: translate(0, -50%);
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.fa{
+    color: #2a2299bb;
+}
+
+@media screen and (max-width:1024px){   
+    .nav-links{
+        width: 40%;
+    }
+    .form{
+        margin-left: 10%;
+    }
+    .form h1{
+        margin-left: 3%;
+    }
+    .form p{
+        margin-top: 1%;
+        margin-left: 0%;
+    }
+    .form .btn{
+        margin-top: 10%;
+        margin-left: 28%;
+    }
+  
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 20vh;
+        top: 9vh;
+        background: linear-gradient(-90deg,  #6873b9, #2843f1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease-in;  
+        z-index: 2;    
+    }
+    .logo img{
+        margin-left: 10%;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+    .form h5{
+        margin-top: 5%;
+    }
+    .form{
+        margin-left: -5%;
+        width: 120%;
+        height: 100%;
+    }
+    .form .email{
+        width: 140%;
+    }
+    .form h1{
+        margin-left: 1%;
+        font-size: 20px;
+    }
+    .form p{
+        margin-top: 1%;
+    }
+    .form .idade{
+        margin-left: 0;
+        margin-top: 2%;
+    }
+    .form .btn{
+        margin-left: 24%;
+        margin-top: 12%;
+    }
+}
+
+.nav-active{
+    transform: translateY(0%);
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes animate{
+    0%{
+        width: 0px;
+        height: 0;
+        opacity: 0.5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+

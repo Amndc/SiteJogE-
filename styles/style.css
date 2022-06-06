@@ -1,0 +1,210 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 11vh;
+    background: linear-gradient(-90deg,  #6873b9, #2843f1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo img{
+    margin-left: 55%;
+    border-radius: 22px;
+    height: 52px;
+    width: 169px;   
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color:rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 17px;
+   
+}
+.nav-links a:hover{
+    color: #8596f6;
+}
+
+body{
+    background-image: url(../images/fundo3.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
+.button{
+    margin-top: 15%;
+    margin-left: 7%;  
+}
+
+.button a{
+    font-family: sans-serif;
+    position: relative;
+    display: inline-block;
+    flex-direction: column;
+    padding: 25px 20px;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, #315eff, #5e70e2);
+    overflow: hidden;
+    border: 1.5px solid rgb(159, 159, 199);
+    font-weight: bold;
+}
+
+.button span{
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+
+.button p{  
+    position: absolute;
+    color: #fff;
+    font-size: 27px;
+    font-family: sans-serif;
+    letter-spacing: 2px;  
+    font-weight: bold;
+    line-height: 40px;
+    text-shadow: rgb(0, 0, 0) 2px 3px 2px ;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;    
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.rodape
+{
+    margin-top: 28%;
+    height: 57px;
+    width: 100%;
+    position: absolute;
+    background-color:  #193086;
+    display: flex;
+}
+
+
+@media screen and (max-width:1024px){   
+    .nav-links{
+        width: 40%;
+    }
+    .button a{
+        margin-top: 5%;
+        padding: 25px 15px;
+        font-size: 15px;
+    }
+    .rodape{
+        margin-top: 35%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 20vh;
+        top: 9vh;
+        background: linear-gradient(-90deg,  #6873b9, #2843f1);;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease-in;      
+    }
+    .logo img{
+        margin-left: 10%;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+    .button a{
+        margin-top: 10%;
+        padding: 22px 13px;
+        font-size: 13px;
+    }
+    .button p{
+        font-size: 20px;
+    }
+    .rodape{
+        margin-top: 60%;
+    }
+}
+
+
+
+.nav-active{
+    transform: translateY(0%);
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes animate{
+    0%{
+        width: 0px;
+        height: 0;
+        opacity: 0.5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}

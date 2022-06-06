@@ -1,0 +1,73 @@
+body
+{
+   margin:0;
+   padding: 0;
+}
+
+section .wave
+{
+
+  position: absolute;
+  width: 100%;
+  height: 143px;
+  left: 0;
+  margin-top: 18%;
+  background: url(../images/wave.png);
+  animation: animate 10s linear infinite;
+}
+section .wave:before
+{
+  content: '';
+  width: 100%;
+  height: 143px;
+  background-image: url(../images/wave.png);
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 0.4;
+
+  animation: animate-reverse 10s linear infinite;
+}
+section .wave:after
+{
+  content: '';
+  width: 100%;
+  height: 143px;
+  background-image: url(../images/wave.png);
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 0.4;
+  animation-delay: -5s;
+  animation: animate 20s linear infinite;
+}
+@keyframes animate
+{
+  0% {background-position: 0;}
+  100% {background-position: 1360px;}
+}
+@keyframes animate-reverse
+{
+  100% {background-position: 0;}
+  0% {background-position: 1360px;}
+}
+@keyframes animate-reverse
+{
+  100% {background-position: 0;}
+  0% {background-position: 1360px;}
+}
+
+
+@media screen and (max-width:1024px){ 
+    section .wave{
+        margin-top: 22%;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    section .wave{
+        margin-top: 40%;
+    }
+}
+

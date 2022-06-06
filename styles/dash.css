@@ -1,0 +1,262 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 11vh;
+    background: linear-gradient(-90deg,  #381988, #2843f1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo img{
+    margin-left: 55%;
+    border-radius: 22px;
+    height: 52px;
+    width: 169px;   
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links a{
+    color:rgb(226, 226, 226);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 15px;
+   
+}
+.nav-links a:hover{
+    color: #8596f6;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;    
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(226, 226, 226);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu{
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+    width: 100%; 
+    background: rgb(80, 97, 192);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+}
+
+.menu img{
+    transform: rotate(0deg);
+    transition: transform white;
+}
+
+.navbar:hover .menu img{
+    transform: rotate(-180deg);
+}
+
+.navbar{
+    position: fixed;
+    background-color: #5678f5;
+    transition: width 200ms ease;
+}
+
+.navbar img{
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.navbar .navbar-nav{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90%;
+}
+
+.navbar .nav-item {
+    width: 100%;
+}
+ 
+.navbar .nav-item:last-child{
+    margin-top: auto;   
+}
+
+.navbar .nav-link2{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    filter: grayscale(0%) opacity(0.8);
+}
+
+.nav-link2:hover{
+    filter:grayscale(0%) opacity(1);
+    background: rgba(58, 34, 105, 0.504);
+    color: #fff;
+}
+
+.navbar .link-text{
+    display: none;
+    margin-left: 1rem;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.navbar .nav-link2 svg{
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover{
+    width: 14rem;
+}
+
+.navbar:hover .link-text{
+    display: block;
+}
+
+
+
+
+@media screen and (max-width:1024px){   
+    .nav-links{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 20vh;
+        top: 9vh;
+        background: linear-gradient(-90deg,  #6873b9, #2843f1);;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease-in;      
+    }
+    .logo img{
+        margin-left: 10%;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .navbar{
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .menu{
+        display: none;
+    }
+    .navbar-nav{
+        flex-direction: row;
+    }
+    .nav-link2{
+        justify-content: center;
+    }
+    main{
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .navbar{     
+        width: 4.5rem;
+        height: 100vh;
+    }
+    .navbar:hover{
+        width: 14rem;
+    }
+    .navbar:hover .link-text{
+        display: inline;
+        transition: opacity;
+    }
+}
+
+.nav-active{
+    transform: transl ateY(0%);
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes animate{
+    0%{
+        width: 0px;
+        height: 0;
+        opacity: 0.5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
